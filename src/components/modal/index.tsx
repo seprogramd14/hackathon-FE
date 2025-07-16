@@ -7,7 +7,7 @@ interface ModalProps {
   onClose: () => void;
 }
 
-const modalRoot = document.getElementById('modal-root');
+const modalRoot = document.getElementById('modal');
 
 const Modal: React.FC<ModalProps> = ({ children, onClose }) => {
   useEffect(() => {

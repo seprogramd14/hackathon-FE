@@ -67,7 +67,6 @@ const style = css`
     font-style: normal;
     font-family: 'Pretendard', sans-serif;
     text-decoration: none;
-
     font-size: 16px;
     font-weight: 400;
     color: ${theme.color.gray[500]};
@@ -75,6 +74,14 @@ const style = css`
 
   body {
     overflow-x: hidden;
+  }
+
+  #modal {
+    position: fixed;
+    z-index: 10000;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
   }
 `;
 
