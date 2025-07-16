@@ -75,14 +75,6 @@ const style = css`
   body {
     overflow-x: hidden;
   }
-
-  #modal {
-    position: fixed;
-    z-index: 10000;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-  }
 `;
 
 export const GlobalStyle = () => {
