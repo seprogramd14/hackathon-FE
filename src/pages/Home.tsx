@@ -8,12 +8,15 @@ import { MoldTwo } from '../components/icons/MoldTwo';
 import { MoldThree } from '../components/icons/MoldThree';
 import { MoldFour } from '../components/icons/MoldFour';
 import { MoldFive } from '../components/icons/MoldFIve';
+import { useNavigate } from 'react-router-dom';
 
 function getRandom(): number {
   return Math.floor(Math.random() * 5) + 1;
 }
 
 export const Home = () => {
+  const navigate = useNavigate();
+
   const items = [
     { title: 'React 입문', date: '2025 . 01 . 12', st: getRandom() },
     { title: 'React 입문', date: '2025 . 01 . 12', st: getRandom() },
@@ -36,6 +39,10 @@ export const Home = () => {
         return '0px';
     }
   }
+
+  const handleStudyClick = () => {
+    navigate('/curriculum-detail');
+  };
 
   return (
     <Wrapper>
@@ -63,7 +70,7 @@ export const Home = () => {
                   </Text>
                 </div>
                 <div>
-                  <Button width={84} height={42} color='gray'>
+                  <Button width={84} height={42} color='gray' onClick={handleStudyClick}>
                     공부하기
                   </Button>
                 </div>
